@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Profile</title>
+</head>
+<body>
+
+    <!--Header-->
+    <header>
+        <h1>Personal Profile Page</h1>
+    </header>
+
+    <!--NAvigation-->
+    <nav>
+        <ul>
+            <li><a href="#profile">Personal Information</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">User Form</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Table -->
+        <section id="profile">
+            <h2>Personal Information</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Full Name</td>
+                        <td>Hemashareni A/P Paramesparan</td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>Program</td>
+                        <td>Sarjana Muda Sains Komputer (Komputeran Mudah Alih) dengan Kepujian</td>
+                    </tr>
+                    <tr>
+                        <td>Hobbies</td>
+                        <td>Playing badminton, listening to music, songwriting</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Article-->
+        <article id="about">
+            <h2>About Me</h2>
+            <p>Welcome to my profile! I am a Year 2 undergraduate student pursuing mobile computing. I enjoy exploring web standards, software development, and creative activities like music production and writing.</p>
+        </article>
+
+        <!-- Form-->
+        <section id="contact">
+            <h2>Feedback & Information Form</h2>
+            <form action="#" method="POST">
+                <p>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label>Gender:</label><br>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                </p>
+
+                <p>
+                    <label>Favorite Hobbies:</label><br>
+                    <input type="checkbox" id="hobby1" name="hobbies" value="Badminton">
+                    <label for="hobby1">Playing Badminton</label><br>
+                    <input type="checkbox" id="hobby2" name="hobbies" value="Music">
+                    <label for="hobby2">Listening to Music</label><br>
+                    <input type="checkbox" id="hobby3" name="hobbies" value="Songwriting">
+                    <label for="hobby3">Songwriting</label>
+                </p>
+
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2026 Hemashareni A/P Paramesparan. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
