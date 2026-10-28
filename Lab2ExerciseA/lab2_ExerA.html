@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang=""en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>TechNova 2026 - Programming Workshop</title>
+</head>
+<body>
+    <!-- Semantic Header section-->
+     <header>
+        <h1> TechNova 2026</h1>
+        <p>Empowering the Next Generation of Code Architecture</p>
+     </header>
+
+     <!--Navigation-->
+     <nav>
+        <a href="#about">About Event</a>
+        <a href="#schedule">Event Schedule</a>
+        <a href="#register">Event Registration</a>
+    </nav>
+
+    <hr>
+
+    <!--Semantic Structure:  About the Event-->
+    <section id="about">
+        <h2>About the Event</h2>
+        <p>Welcome to TechNova 2026, a premier one-day programming workshop designed to share your coding skills.</p>
+
+        <!--Article-->
+        <article>
+            <h3>Our Speaker: Mr. Pranav Parikh</h3>
+            <p>Mr.Pranav will share his insights into the future of decentralized computing and how clean sematic code shapes modern web accessibility.</p>
+        </article>
+
+        <article>
+            <h3>Featured Session: Hands-on Git Workshop</h3>
+            <p> A fast-paced collaborative session where students will learn branching,merching and best practices for managing team workflows on GitHub.</p>
+        </article>
+
+        <hr>
+        <!--Event Schedule-->
+        <section id="schedule">
+            <h2>Event Scedule</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Activity</th>
+                        <th>Venue</th>
+                        <th>Person in Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Row 1-->
+                    <tr>
+                        <td>08:00 AM - 09:00 AM:</td>
+                        <td>Registration &amp:Welcome Kit Collection</td>
+                        <td>Main Lobby</td>
+                        <td>Ms.Jenny</td>
+                    </tr>
+
+                    <!--Row 2-->
+                    <tr>
+                        <td>09:00 AM - 10:30 AM</td>
+                        <td>Keynote: Future of Web Development</td>
+                        <td>Auditorium</td>
+                        <td>Mr.Pranav Parikh</td>
+                    </tr>
+
+                    <!--Row 3-->
+                    <tr>
+                        <td>10:30 AM - 12:00 P:</td>
+                        <td>Hands-On UI/UX Prototyping Workshop</td>
+                        <td rowspan="2">Makmal CISCO</td>
+                        <td>Mr.John</td>
+                    </tr>
+
+                    <!--Row 4-->
+                    <tr>
+                        <td>12:00 PM - 1:00 PM</td>
+                        <td>Version Control Mastery with Git</td>
+                        <td>Ms.Sofia</td>
+                    </tr>
+
+                    <!--Row 5-->
+                    <tr>
+                        <td>1:00 PM - 2:00 PM</td>
+                        <td colspan="3" align="center"<strong>Lunch Break &amp; Networking Session</strong></td>
+                    </tr>
+
+                    <!--Row 6-->
+                    <tr>
+                        <td>2:00 PM - 4:00 PM</td>
+                        <td>Mini Hackaton Challenge</td>
+                        <td>Makmal CISCO</td>
+                        <td>Prof.Clara</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+    <section id="register">
+        <h2>Registration Form</h2>
+        <form action="register.html" method="post">
+            
+            <!-- Text Inputs for Personal Info -->
+            <p>
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" required>
+            </p>
+            
+            <p>
+                <label for="matric">Matric Number:</label><br>
+                <input type="text" id="matric" name="matric" required>
+            </p>
+            
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <!-- Radio Buttons for Year of Study-->
+            <p>
+                <label>Year of Study:</label><br>
+                <input type="radio" id="year1" name="year_of_study" value="Year 1" checked>
+                <label for="year1">Year 1</label><br>
+                
+                <input type="radio" id="year2" name="year_of_study" value="Year 2">
+                <label for="year2">Year 2</label><br>
+                
+                <input type="radio" id="year3" name="year_of_study" value="Year 3">
+                <label for="year3">Year 3</label><br>
+                
+                <input type="radio" id="year4" name="year_of_study" value="Year 4">
+                <label for="year4">Year 4</label>
+            </p>
+
+            <!-- Checkboxes for Sessions-->
+            <p>
+                <label>Sessions to Join (Select at least one):</label><br>
+                <input type="checkbox" id="session1" name="sessions" value="Keynote">
+                <label for="session1">Keynote Talk</label><br>
+                
+                <input type="checkbox" id="session2" name="sessions" value="Git Workshop">
+                <label for="session2">Git Workshop</label><br>
+                
+                <input type="checkbox" id="session3" name="sessions" value="Mini Hackathon">
+                <label for="session3">Mini Hackathon Challenge</label>
+            </p>
+
+            <!-- Drop-down list for Programme-->
+            <p>
+                <label for="programme">Programme / Faculty:</label><br>
+                <select id="programme" name="programme">
+                    <option value="Software Engineering">Faculty of Computing - Software Engineering</option>
+                    <option value="Data Science">Faculty of Computing - Data Science</option>
+                    <option value="Information Systems">Faculty of Computing - Information Systems</option>
+                    <option value="Computer Networks">Faculty of Computing - Computer Systems &amp; Networking</option>
+                </select>
+            </p>
+
+            <!-- Submit Button -->
+            <p>
+                <input type="submit" value="Register Now">
+            </p>
+
+        </form>
+        </section>
+
+        <footer>
+            <p>Organised by the Computer Science Student Society</p>
+            <p>&copy; 2026 TechNova Organising Commitee. All rights reserved.</p>
+        </footer>
+
+
+</body>
+</html>
