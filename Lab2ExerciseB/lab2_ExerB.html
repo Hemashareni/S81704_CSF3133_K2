@@ -1,0 +1,124 @@
+<!--
+  Error 1(Line 10): Incorrect closing tag </head> used instead of </header> to close the <header> element.
+  Error 2(Line 20): Used <td>Rating</td> instead of a table header tag (<th>Rating</th>).
+  Error 3(Line 29): Missing a closing </td> tag after "Semantic HTML" (written as <td>Semantic HTML<td>4.0</td>).
+  Error 4(Line 35): Malformed method attribute with extra double quotes (method=""post>").
+  Error 5(Line 37): Label `for="name"` does not match the input's `id="fullname"`.
+  Error 6(Line 41): Label `for="poor"` has no corresponding radio input element.
+  Error 7(Line 42): Label `for="labs"` references an input ID that does not exist (the checkbox input is missing entirely).
+  Error 8(Line 48): Copyright entity &copy is missing its required semicolon (&copy;).
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Course Feedback</title>
+    </head>
+    <body>
+        <header>
+            <h1>CSF3133 Course Feedback</h1>
+        </header>
+        <nav>
+            <!--Navigation updated to include Student Comments-->
+            <a href="#results">Results</a> | <a href="#form">Feedback Form</a> | <a href="#comment">Student Comments</a>
+        </nav>
+        <section id="results">
+            <h2>Feedback Summary</h2>
+            <table border="1">
+                <tr>
+                    <th>Week</th>
+                    <th>Topic</th>
+                    <th>Rating</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Introduction to HTML</td>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tables and Forms</td>
+                    <td>4.2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Semantic HTML</td>
+                    <td>4.0</td>
+                </tr>\
+                <!--Added rows for week 4 and week 5-->
+                <tr>
+                    <td>4</td>
+                    <td rowspan="2">Mini Project</td>
+                    <td>3.8</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>4.3</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Average Rating</td>
+                    <td>4.16</td>
+                </tr>
+            </table>
+        </section>
+        <section id="form">
+            <h2>Give Your Feedback</h2>
+            <form action="submit_feedback.php" method="post">
+                <!--Input Name-->
+                <label for="fullname">Name:</label>
+                <input type="text" id="fullname" name="name"><br>
+
+                <!--Added email text input-->
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email"><br>
+
+                <label>Overall rating:</label><br>
+                <input type="radio" id="good" name="rating" value="good">
+
+                <!--Added Section with menu for 3 option-->
+                <label for="section-group">Section/Group:</label>
+                <select id="section-group" name="section_group">
+                    <option value="sec1">Section 1</option>
+                    <option value="sec2">Section 2</option>
+                    <option value="sec3">Section 3</option>
+                </select><br>
+
+                <!-- Updated for rating group to include the third radio option "Average" -->
+                <label>Overall rating:</label><br>
+                <input type="radio" id="good" name="rating" value="good">
+                <label for="good">Good</label>
+                <input type="radio" id="average" name="rating" value="average">
+                <label for="average">Average</label>
+                <input type="radio" id="poor" name="rating" value="poor">
+                <label for="poor">Poor</label><br>
+
+                <!-- Standard lab attendance checkbox -->
+                <input type="checkbox" id="labs" name="labs" value="yes">
+                <label for="labs">I attended all labs</label><br>
+
+                <!-- Added group of at least 3 checkboxes for practice topics -->
+                <label>Topics I want more practice on:</label><br>
+                <input type="checkbox" id="practice-html" name="practice[]" value="html">
+                <label for="practice-html">HTML Basics</label><br>
+                <input type="checkbox" id="practice-tables" name="practice[]" value="tables">
+                <label for="practice-tables">Tables & Forms</label><br>
+                <input type="checkbox" id="practice-semantic" name="practice[]" value="semantic">
+                <label for="practice-semantic">Semantic HTML</label><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <!--Added new semantic section containing student feedback article-->
+        <section id="comments">
+            <h2>Student Comments</h2>
+            <article>
+                <h3>Hemashareni A/P Paramesparan</h3>
+                <p>The course materials and practical lab sessions were extremely engaging and helpfull for understanding web developmemt fundamental.</p>
+            </article>
+        </section>
+        <footer>
+            <p>Copyright &copy; 2026 CSF3133</p>
+        </footer>
+    </body>
+</html>
