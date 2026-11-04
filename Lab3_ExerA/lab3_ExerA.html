@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CampusBake® Order Form</title>
+</head>
+<body>
+
+    <!--Header and Navigation -->
+    <header id="header">
+        <h1><span>CampusBake</span></h1>
+        <p>Freshly baked goodness delivered right to your campus!</p>
+    </header>
+
+    <nav id="nav">
+        <a href="#home">Home</a> | 
+        <a href="#products">Products</a> | 
+        <a href="#order">Order</a>
+    </nav>
+
+    <!-- Block and Inline Elements -->
+    <section id="content">
+        <h2>Welcome to CampusBake</h2>
+        <p>A small bakery on campus wants customers to place pre-orders online. Customers must be able to see the price list, fill in an order form, and see the total price instantly before submitting the order. <strong>Experience</strong> the best <em>sweet treats</em> on campus with <span style="color:blue;">exclusive</span> quality <a href="#products">and prices</a>.</p>
+        
+        <p>Our bakery provides fresh items daily, ensuring that every student and staff member enjoys high quality treats between classes. <em>Order early</em> to <strong>avoid</strong> disappointment and enjoy a <span>sweet break</span> today! <a href="#order">Place your order now</a>.</p>
+
+        <p>We take pride in our artisan recipes, welcoming atmosphere, and quick campus delivery. Whether you are craving a fluffy cupcake or a rich cake slice, we have something special for you. <em>Treat yourself</em>, share with friends, and <strong>taste</strong> the magic <a href="#contact">get in touch</a>.</p>
+    </section>
+
+    <!--HTML Entities (Sidebar and Footer) -->
+    <aside id="sidebar">
+        <h3>Price List</h3>
+        <ul>
+            <li>Cupcakes: RM 3.00 each</li>
+            <li>Cake Slices: RM 5.00 each</li>
+            <li>Orders &gt; 10 pieces get a free drink!</li>
+            <li>Prices include &reg; brand trademark &amp; applicable &pound; / &euro; standard rates &copy; 2026.</li>
+        </ul>
+    </aside>
+
+    <!--Order Form and Price Calculator -->
+    <div id="order">
+        <h3>Order Form &amp; Price Calculator</h3>
+        <form oninput="totalPrice.value = (Number(cupcakes.value) * 3) + (Number(slices.value) * 5)">
+            
+            <!-- Customer Name -->
+            <p>
+                <label for="custName">Customer Name:</label><br>
+                <input type="text" id="custName" name="custName" placeholder="Enter your full name" required autofocus>
+            </p>
+
+            <!-- Phone Number -->
+            <p>
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="0123456789" required>
+            </p>
+
+            <!-- E-mail -->
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" placeholder="myemail" required>
+            </p>
+
+            <!-- Pick-up Date and Time -->
+            <p>
+                <label for="pickupDate">Pick-up Date:</label><br>
+                <input type="date" id="pickupDate" name="pickupDate" required>
+            </p>
+            <p>
+                <label for="pickupTime">Pick-up Time:</label><br>
+                <input type="time" id="pickupTime" name="pickupTime" required>
+            </p>
+
+            <!-- Flavour with Datalist -->
+            <p>
+                <label for="flavour">Flavour:</label><br>
+                <input type="text" id="flavour" name="flavour" list="flavourList" required>
+                <datalist id="flavourList">
+                    <option value="Chocolate Fudge">
+                    <option value="Vanilla Bean">
+                    <option value="Strawberry Velvet">
+                    <option value="Matcha Green Tea">
+                </datalist>
+            </p>
+
+            <!-- Icing Colour and Sweetness Level -->
+            <p>
+                <label for="icingColour">Icing Colour:</label><br>
+                <input type="color" id="icingColour" name="icingColour" value="#0000ff">
+            </p>
+            <p>
+                <label for="sweetness">Sweetness Level (1 to 5):</label><br>
+                <input type="range" id="sweetness" name="sweetness" min="1" max="5" step="1" value="3">
+            </p>
+
+            <!-- Price Calculator Inputs (<output>) -->
+            <fieldset>
+                <legend>Price Calculator</legend>
+                <p>
+                    <label for="cupcakes">Cupcakes (RM 3.00 each):</label><br>
+                    <input type="number" id="cupcakes" name="cupcakes" min="0" value="0">
+                </p>
+                <p>
+                    <label for="slices">Cake Slices (RM 5.00 each):</label><br>
+                    <input type="number" id="slices" name="slices" min="0" value="0">
+                </p>
+                <p>
+                    <strong>Total Price (RM): </strong>
+                    <output name="totalPrice" for="cupcakes slices">0</output>
+                </p>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <p>
+                <button type="submit">Submit Order</button>
+            </p>
+        </form>
+    </div>
+
+    
+<!--Footer-->
+    <footer id="footer">
+        <p>&copy; 2026 CampusBake&reg;. All rights reserved. &euro; &pound; &amp; &nbsp;</p>
+    </footer>
+
+</body>
+</html>
