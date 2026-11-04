@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ticket Booking</title>
+</head>
+<body>
+  <!-- 
+  Error 1 (Line 1): missing !DOCTYPE html -> <!DOCTYPE html>[cite: 1]
+  Error 2 (Line 9): misplaced span closing tag -> <h1>...</h1></span> -> <h1>...</h1></span>[cite: 1]
+  Error 3 (Line 11): incorrect use of span, which is an inline element -> <span id="content"> -> <div id="content">[cite: 1]
+  Error 4 (Line 36): misplaced closing span tag -> </span> -> </div>[cite: 1]
+  Error 5 (Line 13): incorrect use of unescaped character & -> staff!&</p> -> staff!&amp;</p>[cite: 1]
+  Error 6 (Line 14): JavaScript error where two string are concatenated and the output tag does not show the total value -> total.value = adult.value + child.value -> total.value = parseInt(adult.value) + parseInt(child.value)[cite: 1]
+  Error 7 (Line 18): syntax error -> type="emial" -> type="email"[cite: 1]
+  Error 8 (Line 22): the movie name is not in the data list -> list="movies" -> list="movielist"[cite: 1]
+  Error 9 (Line 23): misplace of datalist id -> datalist id="movielist" -> datalist id="movies"[cite: 1]
+  Error 10 (Line 32): reverse values -> min="5" max="1" -> min="1" max="5"[cite: 1]
+  Error 11 (Line 33): wrong reference -> for="adult kid" -> for="adult child"[cite: 1]
+  Error 12 (Line 41): closing body tag misplaced -> </html>54 </body> -> </body> </html>[cite: 1]
+  -->
+  <div id="header">
+    <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+  </div>
+  
+  <!-- Part 2 - Item 5: Added sidebar listing at least 3 movies using inline elements (strong, span, a) -->
+  <div id="sidebar">
+    <h2>Now Showing</h2>
+    <p>
+      <strong>Power Rangers</strong> - <span>PG-13</span> (<a href="#trailer1">Watch Trailer</a>)<br>
+      <strong>Kpop Demon Hunters</strong> - <span>U</span> (<a href="#trailer2">Watch Trailer</a>)<br>
+      <strong>Om Shanthi Om</strong> - <span>18</span> (<a href="#trailer3">Watch Trailer</a>)
+    </p>
+  </div>
+
+  <div id="content">
+    <h2>Book Your Ticket</h2>
+    <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+    <form action="booking.php" oninput="total.value = parseInt(adult.value) + parseInt(child.value); price.value = (parseInt(adult.value) * 12) + (parseInt(child.value) * 8)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br>
+      
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email"><br>
+      
+      <!-- Part 2 - Item 6: Added phone number input (type="tel") and show time input (type="time") -->
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required><br>
+
+      <label for="date">Show date:</label>
+      <input type="date" id="date" name="date"><br>
+
+      <label for="time">Show time:</label>
+      <input type="time" id="time" name="time"><br>
+
+      <label for="movie">Movie:</label>
+      <input id="movie" name="movie" list="movies"><br>
+      <datalist id="movies">
+        <option value="Space Rangers">
+        <option value="Kampung Comedy">
+        <option value="Cyber Pursuit">
+      </datalist>
+      
+      <label for="adult">Adult tickets:</label>
+      <input type="number" id="adult" name="adult" value="0"><br>
+      
+      <label for="child">Child tickets:</label>
+      <input type="number" id="child" name="child" value="0"><br>
+      
+      <label for="rating">Rate our service:</label>
+      <input type="range" id="rating" name="rating" min="1" max="5"><br>
+      
+      Total tickets: <output name="total" for="adult child"></output><br>
+      
+      <!-- Part 2 - Item 7: Added second output for the total price (Adult = RM 12, Child = RM 8) -->
+      Total price (RM): <output name="price" for="adult child"></output><br>
+      
+      <input type="submit" value="Book Now">
+    </form>
+  </div>
+  
+  <div id="footer">
+    <!-- Part 2 - Item 8: Footer text updated using correct entities for ®, <, and & -->
+    <p>e-Ticket&reg; &ndash; Campus Cinema &lt; RM10 every Tuesday</p>
+    <p>&copy; 2026 CineKampus. All rights reserved.</p>
+  </div>
+</body>
+</html>
