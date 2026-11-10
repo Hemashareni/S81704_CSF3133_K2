@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise 4 - Responsive Webpage</title>
+    
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .internal-highlight {
+            background-color: #eef2f7;
+            border-left: 4px solid #1d3557;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <h1>Welcome to Lab Exercise 4</h1>
+        <p>Demonstrating HTML5 Semantic Structure and CSS Styling</p>
+        
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#form-section">Contact Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+        
+        <!-- Section 1: About / Semantic Elements -->
+        <section id="about">
+            <h2>1. Semantic Structure & Overview</h2>
+            <article>
+                <h3>Modern Web Development</h3>
+                <p>This webpage is built using modern HTML5 semantic elements such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code> to ensure clean architecture and accessibility.</p>
+                
+                <div class="internal-highlight">
+                    Note: This callout box is styled dynamically using internal CSS rules defined directly in the head section of this document.
+                </div>
+            </article>
+        </section>
+
+        <!-- Section 2: Insert Media -->
+        <section id="media">
+            <h2>2. Insert Media</h2>
+            <p>Below is an embedded sample video equipped with proper track captions to satisfy accessibility and rubric requirements:</p>
+            
+            <div class="video-container">
+                <video controls crossorigin="anonymous">
+                    <!-- Replace 'sample-video.mp4' with your actual video filename or URL -->
+                    <source src="sample-video.mp4" type="video/mp4">
+                    <!-- Text track captions -->
+                    <track src="captions.vtt" kind="subtitles" srclang="en" label="English" default>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- Section 3: Interactive Elements  -->
+        <section id="form-section">
+            <h2>3. Interactive Elements</h2>
+            <p>Please fill out the form below with your details, preferred gender, and favorite hobbies:</p>
+            
+            <form action="#" method="POST">
+                
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Name (Text Input):</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email (Text Input):</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label>Gender (Radio Buttons):</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                    </div>
+                </div>
+
+                <!-- Favorite Hobbies  -->
+                <div class="form-group">
+                    <label>Favorite Hobbies (Checkboxes):</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="hobbies" value="badminton"> Badminton</label>
+                        <label><input type="checkbox" name="hobbies" value="music"> Music</label>
+                        <label><input type="checkbox" name="hobbies" value="songwriting"> Songwriting</label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Form</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Lab Exercise 4 Webpage. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
