@@ -1,0 +1,86 @@
+/* =========================================
+   Navigation Bar Styles (Moved from HTML)
+   ========================================= */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #2C3E50;
+  overflow: hidden;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a:link,
+nav a:visited {
+  display: block;
+  background-color: #2C3E50;
+  color: #FFFFFF;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:active {
+  background-color: #E67E22;
+  color: #FFFFFF;
+}
+
+/* =========================================
+   Promotion Old Price Styling
+   ========================================= */
+.old-price {
+  text-decoration: line-through;
+  color: #7F8C8D;
+  margin-right: 6px;
+}
+
+/* =========================================
+   Responsive Video Styling
+   ========================================= */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   Customer Feedback Form Styling
+   ========================================= */
+.feedback-form {
+  background-color: #F9F9F9;
+  border: 1px solid #CCCCCC;
+  padding: 20px;
+  max-width: 500px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.feedback-form label {
+  font-weight: bold;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0 14px 0;
+  box-sizing: border-box;
+}
+
+.feedback-form button,
+.feedback-form input[type="submit"] {
+  background-color: #1A5276;
+  color: #FFFFFF;
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.feedback-form button:hover,
+.feedback-form input[type="submit"]:hover {
+  background-color: #E67E22;
+}

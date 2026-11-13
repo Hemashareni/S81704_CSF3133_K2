@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>e-Café Campus</title>
+
+  <!-- 
+    Part 1 - Error List and Line Numbers Fixed:
+    1. Line 7: Replaced invalid HTML comment inside style with CSS comment.
+    2. Line 9: Corrected list-style-type no to none.
+    3. Lines 13-16: Reordered pseudo-classes to LVHA order.
+    4. Line 17: Corrected text-decoration overlined to overline.
+    5. Line 18: Added missing colon in color property.
+    6. Line 21: Added missing closing curly brace for intro rule.
+    7. Line 22: Added missing dot for highlight class selector.
+    8. Line 26: Added missing closing style, head, and opening body tags.
+    9. Line 34: Fixed Menu anchor href to reference #menu.
+    10. Line 53: Added controls attribute to video element.
+  -->
+
+  <style>
+    /* Navigation bar */
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Link states in correct LVHA order */
+    a:link { color: #1A5276; }
+    a:visited { color: #7D3C98; }
+    a:hover { color: #E67E22; }
+    a:active { color: #C0392B; }
+
+    h1 { text-decoration: overline; }
+
+    p { 
+      color: #333333; 
+      text-align: justify; 
+    }
+
+    #intro {
+      font-size: 18px;
+      background-color: #FDEBD0;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #C0392B;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>e-Café Campus</h1>
+    <nav>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Menu Section -->
+    <section id="menu">
+      <h2>Today's Menu</h2>
+      <p id="intro">Freshly brewed coffee and local delights every day.</p>
+
+      <article>
+        <h3>Kopi Tarik</h3>
+        <p>Only <span class="highlight">RM 3.50</span></p>
+      </article>
+
+      <article>
+        <h3>Nasi Lemak</h3>
+        <p>Only <span class="highlight">RM 5.00</span></p>
+      </article>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+      <h2>Watch Our Story</h2>
+      <video width="400" controls>
+        <source src="cafe_story.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>&copy; 2026 e-Café Campus</p>
+  </footer>
+
+</body>
+</html>
