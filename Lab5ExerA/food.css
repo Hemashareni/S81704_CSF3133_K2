@@ -1,0 +1,124 @@
+/* Base page styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #FBF7F0;
+  color: #2C2C2C;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header with background image */
+.hero-header {
+  background-image: url("header-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 60px 20px;
+}
+
+.hero-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.2rem;
+}
+
+.hero-header p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/*Horizontal navigation bar */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #222222;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 18px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111111;
+}
+
+nav li a.active {
+  background-color: #E67E22;
+  color: white;
+}
+
+/* Main content container and readable paragraphs */
+main {
+  width: 90%;
+  max-width: 980px;
+  margin: 28px auto;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+main p {
+  text-align: justify;
+  line-height: 1.7;
+}
+
+/*Styled table */
+#festival-menu {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid #C0392B;
+}
+
+#festival-menu th,
+#festival-menu td {
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+#festival-menu th {
+  background-color: #E67E22;
+  color: white;
+  text-transform: uppercase;
+}
+
+#festival-menu tbody tr:nth-child(even) {
+  background-color: #F2F2F2;
+}
+
+#festival-menu tbody tr:hover {
+  background-color: #FDEBD0;
+}
+
+#festival-menu .price-col {
+  text-align: right;
+}
+
+/*Footer */
+footer {
+  background-color: #EFE6D8;
+  color: #333;
+  text-align: center;
+  padding: 16px 20px;
+  font-size: 0.9rem;
+}
