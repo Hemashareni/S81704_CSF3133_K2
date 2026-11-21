@@ -1,0 +1,125 @@
+/* Error 1 (Line 2): Fixed typo 'Robotto' to 'Roboto'. */
+/* Error 2 (Line 4): Fixed 'no repeat' to 'no-repeat'. */
+/* Error 3 (Line 5): Fixed typo 'bacground-position' to 'background-position'. */
+/* Error 4 (Line 13): Moved 'background-color: #333;' inside the ul rule block. */
+/* Error 5 (Line 18): Changed 'display: inline' on 'li a' to 'display: block'. */
+/* Error 6 (Line 23): Fixed invalid selector 'li:a:hover' to 'li a:hover'. */
+/* Error 7 (Line 26): Fixed 'border-collapse: collapsed' to 'collapse'. */
+/* Error 8 (Line 34): Changed 'tr:nth-child(2)' to 'tr:nth-child(even)' for alternating rows. */
+/* Error 9 (Line 37): Fixed invalid pseudo-class 'tr:hovered' to 'tr:hover'. */
+/* Error 10 (Line 45): Added missing semicolon after '#f1f1f1'. */
+
+/* Page body and paper background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: url("paper.gif");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+/* Header styling with cover background image */
+.shop-header {
+  background-image: url("books.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.shop-header h1 {
+  font-family: 'Merriweather', serif;
+  color: white;
+  margin: 0 0 8px 0;
+}
+
+.shop-header .tagline {
+  margin: 0;
+  color: white;
+}
+
+/* Horizontal navigation bar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Main content area and paragraph readability */
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 24px auto;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Product table styling */
+#product {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#product td,
+#product th {
+  border: 1px solid #ddd;
+  padding: 12px 8px;
+}
+
+#product th {
+  background-color: #04AA6D;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#product tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#product tbody tr:hover {
+  background-color: #ddd;
+}
+
+#product .price-col {
+  text-align: right;
+}
+
+/* Footer styling */
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 14px 10px;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 0;
+}

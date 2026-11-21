@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Bookstore</title>
+  <!-- Error 2 (Line 6): Invalid rel="stylesheets" corrected to rel="stylesheet". -->
+  <!-- Part 2.8: Added Merriweather alongside Roboto in the same Google Fonts link. -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shop.css">
+  <style>
+    /* Error 3 (Line 10): Moved <style> from <body> into <head>. */
+    h1 {
+      text-align: center;
+      color: #1B4F72;
+    }
+  </style>
+</head>
+<body>
+  <!-- Error 1 (Lines 2-3): Fixed ordering of <html lang="en"> and <head>. -->
+  <!-- Error 4 (Line 18): Fixed inline style syntax "color=#1B4F72" to "color: #1B4F72". -->
+  <!-- Error 5 (Line 20): Aligned table id="product" with CSS selector #product. -->
+
+  <!-- Part 2.5: Added <header> with title and background image -->
+  <header class="shop-header">
+    <h1>Campus Bookstore</h1>
+    <p class="tagline">Your one-stop shop for academic essentials</p>
+  </header>
+
+  <!-- Part 2.5 & 2.6: Added <nav> with .active class on Home -->
+  <nav>
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Part 2.5: Wrapped main content in <main> -->
+  <main id="books">
+    <p>Textbooks, stationery and more for every student.</p>
+    <table id="product">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Category</th>
+          <th class="price-col">Price (RM)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Web Design Basics</td>
+          <td>Textbook</td>
+          <td class="price-col">45.00</td>
+        </tr>
+        <tr>
+          <td>A4 Notebook</td>
+          <td>Stationery</td>
+          <td class="price-col">6.50</td>
+        </tr>
+        <tr>
+          <td>USB Drive 32GB</td>
+          <td>Gadget</td>
+          <td class="price-col">25.00</td>
+        </tr>
+        <tr>
+          <td>Highlighter Set</td>
+          <td>Stationery</td>
+          <td class="price-col">9.90</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Part 2.5 & 2.9: Styled <footer> -->
+  <footer id="contact">
+    <p>&copy; 2026 Campus Bookstore</p>
+  </footer>
+</body>
+</html>
