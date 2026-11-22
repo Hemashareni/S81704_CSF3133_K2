@@ -1,0 +1,45 @@
+<!--Error 1 ( Line 9): onsubmit="checkMark()" does not return false, causing the form to submit and refresh the page so the result disappears immediately
+// Error 2 ( Line 18): onclick="showtable()" uses lowercase "showtable()", whereas the function is named "showTable()"
+// Error 3 ( Line 20): <script src="grades.js"></script> points to "grades.js" instead of "grade.js"-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Calculator</title>
+  <!--Link external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Student Grade Calculator</h2>
+
+    <!-- Return false from checkMark() so form submission does not reload the page -->
+    <form name="gradeForm" onsubmit="return checkMark()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br>
+
+      <label for="mark">Mark (0-100): </label>
+      <input type="text" id="mark" name="mark"><br>
+
+      <div class="form-actions">
+        <button type="submit">Check Grade</button>
+        <!--Button to generate a random whole number from 0 to 100 -->
+        <button type="button" onclick="generateRandomMark()">Random Mark</button>
+      </div>
+    </form>
+
+    <!-- Displays grade result and timestamp -->
+    <p id="result"></p>
+    <p id="checkedTime"></p>
+
+    <!-- Calls showTable() with matching capitalization -->
+    <button type="button" onclick="showTable()">Show Grade Table</button>
+    <div id="tableContainer"></div>
+  </div>
+
+  <!-- Points to grade.js instead of grades.js -->
+  <script src="grade.js"></script>
+</body>
+</html>
