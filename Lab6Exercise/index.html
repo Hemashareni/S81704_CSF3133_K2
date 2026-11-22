@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Quiz Application</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="quiz-container">
+    <!-- Header for introducing the quiz -->
+    <header class="quiz-header">
+      <h1>Web Dev Challenge Quiz</h1>
+      <p>Test your knowledge before the timer runs out!</p>
+    </header>
+
+    <!-- Section for question, answer options, and countdown timer -->
+    <section id="quiz-section" class="quiz-section" aria-live="polite">
+      <div class="meta-bar">
+        <span id="question-counter">Question 1</span>
+        <span id="timer" class="timer">Time: 15s</span>
+      </div>
+
+      <h2 id="question-text" class="question-text">Loading question...</h2>
+
+      <div id="options-container" class="options-container" role="radiogroup" aria-label="Answer options">
+        <!-- Answer buttons/inputs are injected dynamically by script.js -->
+      </div>
+    </section>
+
+    <!-- Section for real-time feedback (correct/incorrect/time up) -->
+    <section id="feedback-section" class="feedback-section" aria-live="polite">
+      <p id="feedback-text" class="feedback-text"></p>
+    </section>
+
+    <!-- Controls for submitting answers and navigating -->
+    <section class="controls-section">
+      <button id="submit-btn" type="button" class="btn btn-primary">Submit Answer</button>
+      <button id="next-btn" type="button" class="btn btn-secondary" disabled>Next Question</button>
+      <button id="restart-btn" type="button" class="btn btn-outline hidden">Restart Quiz</button>
+    </section>
+
+    <!-- Footer displaying current score  -->
+    <footer id="quiz-footer" class="quiz-footer">
+      <p id="score-display">Score: 0</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
