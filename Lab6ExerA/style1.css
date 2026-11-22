@@ -1,0 +1,145 @@
+/* Page layout and base typography */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #1e293b;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Header styling */
+.header {
+  background-color: #144d75;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.header h1 {
+  margin: 0 0 6px 0;
+}
+
+.header p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Section spacing */
+section {
+  padding: 18px 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Buttons and hover effects */
+button {
+  background-color: #2575b8;
+  color: #ffffff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #175487;
+}
+
+input[type="text"] {
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  margin: 0 8px;
+}
+
+#welcomeMsg {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* Choice images and VS layout */
+.arena {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 18px;
+  text-align: center;
+}
+
+.arena img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 8px;
+  background-color: #f8fafc;
+}
+
+.vs-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #64748b;
+}
+
+/* Result and scoreboard */
+#result {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.scoreboard {
+  font-weight: bold;
+}
+
+/* History table styling */
+#history {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 14px;
+}
+
+#history th,
+#history td {
+  border: 1px solid #cbd5e1;
+  padding: 10px;
+  text-align: center;
+}
+
+#history th {
+  background-color: #144d75;
+  color: #ffffff;
+}
+
+#summary {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #f1f5f9;
+  padding: 14px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.footer p {
+  margin: 4px 0;
+}
